@@ -8,7 +8,8 @@ var Bob = function() {};
 Bob.prototype.hey = function(input) {
   input_array = input.split("")
   last_symbol = input_array[input_array.length - 1]
-  if (input.toUpperCase() === input) {
+
+  if (input.toUpperCase() === input && (input.match(/^[a-zA-Z]/) || last_symbol === "!")) {
     return "Whoa, chill out!"
   }
   else if (last_symbol == "?") {
