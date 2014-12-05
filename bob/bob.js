@@ -14,6 +14,8 @@ Bob.prototype.hey = function(input) {
   }
   else if (last_symbol == "?") {
     return "Sure."
+  } else if (input.search(/\S/) === -1 ) {
+    return ("Fine. Be that way!")
   } else {
   return "Whatever."
   }
